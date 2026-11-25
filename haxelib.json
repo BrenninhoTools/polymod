@@ -1,6 +1,6 @@
 {
   "name": "polymod",
-  "url": "https://github.com/larsiusprime/polymod",
+  "url": "https://github.com/BrenninhoTools/polymod",
   "license": "MIT",
   "tags": ["mod", "game", "data", "asset"],
   "description": "An atomic modding framework for Haxe games",

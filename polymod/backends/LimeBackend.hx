@@ -780,14 +780,13 @@ class LimeModLibrary extends LimeAssetLibrary
     var symbol = new IdAndLibrary(id, this);
     if (p.check(symbol.modId))
     {
+      #if !lime_funkin
       if (pathGroups.exists(p.file(symbol.modId)))
       {
         return AudioBuffer.loadFromFiles(pathGroups.get(p.file(symbol.modId)));
       }
-      else
-      {
-        return AudioBuffer.loadFromFile(getPath(p.file(symbol.modId)) ?? p.file(symbol.modId));
-      }
+      #end
+      return AudioBuffer.loadFromFile(getPath(p.file(symbol.modId)) ?? p.file(symbol.modId));
     }
     else if (hasFallback)
     {
